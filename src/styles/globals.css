@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&family=Source+Sans+Pro:wght@300;400;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #FAF9F6;
+  color: #1A1A1A;
+  font-family: 'Inter', sans-serif;
+  letter-spacing: 0.5px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Tipografia */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Playfair Display', serif;
+  font-weight: 600;
+  line-height: 1.2;
+  letter-spacing: -0.5px;
+}
+
+h1 {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+}
+
+h2 {
+  font-size: clamp(2rem, 4vw, 3.5rem);
+}
+
+h3 {
+  font-size: clamp(1.5rem, 3vw, 2.5rem);
+}
+
+p {
+  line-height: 1.8;
+  font-weight: 300;
+}
+
+/* Scrollbar customizado */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #F3EFE7;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #556B2F;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #454621;
+}
+
+/* Animações globais */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.8s ease-out;
+}
+
+/* Botões base */
+.btn-primary {
+  @apply px-8 py-3 bg-gema-olive text-gema-white font-medium rounded-lg transition-all duration-300 hover:bg-opacity-90 hover:shadow-lg;
+}
+
+.btn-secondary {
+  @apply px-8 py-3 border-2 border-gema-olive text-gema-olive font-medium rounded-lg transition-all duration-300 hover:bg-gema-olive hover:text-gema-white;
+}
+
+.btn-tertiary {
+  @apply px-8 py-3 text-gema-olive font-medium underline transition-all duration-300 hover:opacity-70;
+}
+
+/* Divider elegante */
+.divider-elegant {
+  @apply h-0.5 bg-gradient-to-r from-transparent via-gema-warm-gray to-transparent;
+}
+
+/* Cards base */
+.card-base {
+  @apply bg-gema-white p-8 rounded-lg transition-all duration-300 border border-gema-warm-gray;
+}
+
+/* Textura de papel */
+.paper-texture {
+  background-image: url('data:image/svg+xml,%3Csvg width="100" height="100" xmlns="http://www.w3.org/2000/svg"%3E%3Cfilter id="noise"%3E%3CfeTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="4" result="noise"/%3E%3CfeColorMatrix in="noise" type="saturate" values="0.3"/%3E%3C/filter%3E%3Crect width="100" height="100" fill="%23F3EFE7" filter="url(%23noise)" opacity="0.1"/%3E%3C/svg%3E');
+}
+
+/* Efeito glassmorphism premium */
+.glass-effect {
+  backdrop-filter: blur(10px);
+  background: rgba(250, 249, 246, 0.7);
+  border: 1px solid rgba(217, 212, 204, 0.3);
+}
