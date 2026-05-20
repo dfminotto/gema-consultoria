@@ -142,7 +142,7 @@ export default function Footer() {
             viewport={{ once: true }}
           >
             {[
-              { label: 'Instagram', href: 'https://instagram.com', icon: '📷' },
+              { label: 'Instagram', href: 'https://www.instagram.com/consultoriagema/', icon: '📷' },
               { label: 'WhatsApp', href: 'https://wa.me/5541998959570', icon: '💬' },
             ].map((social) => (
               <motion.a
