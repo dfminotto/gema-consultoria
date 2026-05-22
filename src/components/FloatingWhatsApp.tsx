@@ -4,7 +4,7 @@ import { useState } from 'react';
 export default function FloatingWhatsApp() {
   const [isHovered, setIsHovered] = useState(false);
 
-  const whatsappLink = 'https://wa.me/5541998959570?text=Olá,%20vim%20pelo%20site%20da%20GEMA%20e%20gostaria%20de%20conhecer%20a%20consultoria.';
+  const whatsappLink = 'https://wa.me/5541995645554?text=Olá,%20vim%20pelo%20site%20da%20GEMA%20e%20gostaria%20de%20conhecer%20a%20consultoria.';
 
   return (
     <motion.div

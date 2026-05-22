@@ -22,7 +22,7 @@ export default function Contact() {
     e.preventDefault();
     // Create WhatsApp message with form data
     const message = `Olá! Meu nome é ${formData.name}, meu negócio é ${formData.businessType} e gostaria de conhecer a consultoria. ${formData.message}`;
-    const whatsappUrl = `https://wa.me/5541998959570?text=${encodeURIComponent(message)}`;
+    const whatsappUrl = `https://wa.me/5541995645554?text=${encodeURIComponent(message)}`;
     window.open(whatsappUrl, '_blank');
   };
 
@@ -237,7 +237,7 @@ export default function Contact() {
             <div className="grid md:grid-cols-3 gap-6">
               {/* WhatsApp */}
               <motion.a
-                href="https://wa.me/5541998959570?text=Olá,%20vim%20pelo%20site%20da%20GEMA%20e%20gostaria%20de%20conhecer%20a%20consultoria."
+                href="https://wa.me/5541995645554?text=Olá,%20vim%20pelo%20site%20da%20GEMA%20e%20gostaria%20de%20conhecer%20a%20consultoria."
                 target="_blank"
                 rel="noopener noreferrer"
                 whileHover={{ scale: 1.05, y: -4 }}
@@ -245,7 +245,7 @@ export default function Contact() {
               >
                 <span className="text-3xl">💬</span>
                 <span className="font-semibold">WhatsApp</span>
-                <span className="text-sm font-light">(41) 99895-9570</span>
+                <span className="text-sm font-light">(41) 99564-5554</span>
               </motion.a>
 
               {/* Instagram */}
@@ -263,13 +263,13 @@ export default function Contact() {
 
               {/* Email */}
               <motion.a
-                href="mailto:contato@gemaconsultoria.com"
+                href="mailto:assessoria.gema@gmail.com"
                 whileHover={{ scale: 1.05, y: -4 }}
                 className="flex flex-col items-center gap-3 p-6 rounded-lg bg-gema-beige hover:bg-gema-olive hover:text-gema-white transition-all duration-300 border border-gema-warm-gray"
               >
                 <span className="text-3xl">✉️</span>
                 <span className="font-semibold">E-mail</span>
-                <span className="text-sm font-light">contato@gema.com</span>
+                <span className="text-sm font-light">assessoria.gema@gmail.com</span>
               </motion.a>
             </div>
           </motion.div>

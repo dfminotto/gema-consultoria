@@ -86,20 +86,20 @@ export default function Footer() {
             <ul className="space-y-3">
               <li>
                 <a
-                  href="https://wa.me/5541998959570"
+                  href="https://wa.me/5541995645554"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-sm font-light text-gema-beige hover:text-gema-olive transition-colors duration-300"
                 >
-                  WhatsApp: (41) 99895-9570
+                  WhatsApp: (41) 99564-5554
                 </a>
               </li>
               <li>
                 <a
-                  href="mailto:contato@gema.com"
+                  href="mailto:assessoria.gema@gmail.com"
                   className="text-sm font-light text-gema-beige hover:text-gema-olive transition-colors duration-300"
                 >
-                  contato@gema.com
+                  assessoria.gema@gmail.com
                 </a>
               </li>
               <li>
@@ -143,7 +143,7 @@ export default function Footer() {
           >
             {[
               { label: 'Instagram', href: 'https://www.instagram.com/consultoriagema/', icon: '📷' },
-              { label: 'WhatsApp', href: 'https://wa.me/5541998959570', icon: '💬' },
+              { label: 'WhatsApp', href: 'https://wa.me/5541995645554', icon: '💬' },
             ].map((social) => (
               <motion.a
                 key={social.label}
