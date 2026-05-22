@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import Image from 'next/image';
 
 const teamMembers = [
   {
@@ -12,7 +13,8 @@ const teamMembers = [
       'Processos de produção',
       'Estruturação operacional',
     ],
-    initials: 'GR',
+    photo: '/images/foto_gabriel.jpeg',
+    photoPosition: 'center 20%',
   },
   {
     name: 'Melissa Abe Misawa',
@@ -25,7 +27,8 @@ const teamMembers = [
       'Inovação culinárica',
       'Excelência operacional',
     ],
-    initials: 'MM',
+    photo: '/images/foto_melissa.jpeg',
+    photoPosition: 'center 25%',
   },
 ];
 
@@ -71,7 +74,7 @@ export default function Team() {
 
         {/* Team Cards */}
         <motion.div
-          className="grid md:grid-cols-2 gap-12"
+          className="grid md:grid-cols-2 gap-12 items-stretch"
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
@@ -81,35 +84,27 @@ export default function Team() {
             <motion.div
               key={member.name}
               variants={itemVariants}
-              className="group"
+              className="group h-full"
               whileHover={{ y: -8 }}
               transition={{ duration: 0.3 }}
             >
-              <div className="bg-gema-white rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 border border-gema-warm-gray">
-                {/* Avatar */}
-                <div className="h-64 bg-gradient-to-br from-gema-olive to-gema-bronze flex items-center justify-center relative overflow-hidden">
-                  <motion.div
-                    className="w-32 h-32 rounded-full bg-gema-white flex items-center justify-center text-4xl font-playfair text-gema-olive font-bold"
-                    animate={{ scale: [1, 1.05, 1] }}
-                    transition={{ duration: 3, repeat: Infinity }}
-                  >
-                    {member.initials}
-                  </motion.div>
-
-                  {/* Decorative elements */}
-                  <motion.div
-                    className="absolute top-4 right-4 w-12 h-12 border-2 border-gema-white rounded-lg opacity-30"
-                    animate={{ rotate: 45 }}
-                    transition={{ duration: 6, repeat: Infinity }}
-                  />
-                </div>
-
+              <div className="bg-gema-white rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 border border-gema-warm-gray h-full">
                 {/* Content */}
-                <div className="p-8">
-                  <h3 className="text-2xl font-playfair text-gema-charcoal mb-1">
+                <div className="p-8 pt-10">
+                  {/* Circular Avatar */}
+                  <div className="w-80 h-80 rounded-full overflow-hidden mx-auto mb-6 relative border-4 border-gema-beige shadow-md">
+                    <Image
+                      src={member.photo}
+                      alt={member.name}
+                      fill
+                      className="object-cover"
+                      style={{ objectPosition: member.photoPosition }}
+                    />
+                  </div>
+                  <h3 className="text-2xl font-playfair text-gema-charcoal mb-1 text-center">
                     {member.name}
                   </h3>
-                  <p className="text-sm font-semibold text-gema-olive mb-6">
+                  <p className="text-sm font-semibold text-gema-olive mb-6 text-center">
                     {member.role}
                   </p>
 
@@ -129,7 +124,7 @@ export default function Team() {
                       {member.skills.map((skill) => (
                         <motion.span
                           key={skill}
-                          className="text-xs px-3 py-1 bg-gema-beige text-gema-charcoal rounded-full border border-gema-warm-gray"
+                          className="text-xs px-3 py-1 bg-gema-beige text-gema-charcoal rounded-full border border-gema-warm-gray cursor-default select-none"
                           whileHover={{ scale: 1.05, backgroundColor: '#556B2F', color: '#FAF9F6' }}
                           transition={{ duration: 0.2 }}
                         >

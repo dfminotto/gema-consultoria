@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import Image from 'next/image';
 
 const differentials = [
   {
@@ -58,23 +59,12 @@ export default function Differentials() {
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-            <div className="absolute inset-0 bg-gradient-to-br from-gema-olive to-gema-bronze rounded-lg overflow-hidden shadow-2xl">
-              {/* Placeholder */}
-              <div className="w-full h-full flex items-center justify-center">
-                <svg
-                  className="w-32 h-32 text-gema-white opacity-30"
-                  fill="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" />
-                </svg>
-              </div>
-
-              {/* Decorative corner */}
-              <motion.div
-                className="absolute -top-6 -right-6 w-32 h-32 border-2 border-gema-white opacity-30"
-                animate={{ rotate: 360 }}
-                transition={{ duration: 15, repeat: Infinity, ease: 'linear' }}
+            <div className="absolute inset-0 rounded-lg overflow-hidden shadow-2xl">
+              <Image
+                src="/images/foto_nosso_diferencial.jpeg"
+                alt="Nosso Diferencial"
+                fill
+                className="object-cover"
               />
             </div>
           </motion.div>
